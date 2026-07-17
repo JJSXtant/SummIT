@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Page Summarizer — Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>Page Summarizer settings</h1>
+
+    <section>
+      <h2>Appearance</h2>
+      <label class="field">
+        <span>Theme</span>
+        <select id="theme">
+          <option value="auto">Auto (follow system)</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </section>
+
+    <section>
+      <h2>Provider</h2>
+      <label class="field">
+        <span>Use</span>
+        <select id="provider">
+          <option value="gemini">Gemini (Google API)</option>
+          <option value="ollama">Ollama (local)</option>
+        </select>
+      </label>
+
+      <div id="geminiFields">
+        <label class="field">
+          <span>Gemini API key</span>
+          <input id="geminiKey" type="password" autocomplete="off" placeholder="AIza…">
+        </label>
+        <p class="hint">Free at <span class="mono">aistudio.google.com</span> → Get API key. Stored only on this device.</p>
+        <label class="field">
+          <span>Model</span>
+          <input id="geminiModel" type="text" placeholder="gemini-2.5-flash">
+        </label>
+        <label class="field">
+          <span>Max characters of page text to send</span>
+          <input id="geminiMaxChars" type="number" min="1000" max="4000000" step="1000">
+        </label>
+        <p class="hint">Gemini 2.5 Flash accepts up to ~4,000,000 characters (≈1M tokens). Longer pages are cut at this limit.</p>
+      </div>
+
+      <div id="ollamaFields" hidden>
+        <label class="field">
+          <span>Ollama URL</span>
+          <input id="ollamaUrl" type="text" placeholder="http://localhost:11434">
+        </label>
+        <label class="field">
+          <span>Model</span>
+          <input id="ollamaModel" type="text" placeholder="llama3.2">
+        </label>
+        <label class="field">
+          <span>Max characters of page text to send</span>
+          <input id="ollamaMaxChars" type="number" min="1000" max="4000000" step="1000">
+        </label>
+        <p class="hint">Keep this modest: local models default to small context windows (~4,000–8,000 tokens) and Ollama silently drops the oldest input when exceeded. ~12,000 characters is a safe default; raise it only if you've raised the model's num_ctx.</p>
+        <p class="hint">Ollama must allow extension requests. Start it with <span class="mono">OLLAMA_ORIGINS=chrome-extension://* ollama serve</span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>What gets sent with the page text</h2>
+      <label class="check"><input type="checkbox" id="includeTitle"> Page title</label>
+      <label class="check"><input type="checkbox" id="includeUrl"> Page URL</label>
+      <label class="check"><input type="checkbox" id="includeDate"> Capture date/time</label>
+    </section>
+
+    <section>
+      <h2>Saved prompts</h2>
+      <div id="presetList"></div>
+      <button id="addPreset" class="secondary">Add prompt</button>
+    </section>
+
+    <div class="savebar">
+      <button id="save" class="primary">Save settings</button>
+      <span id="saveStatus" class="hint"></span>
+    </div>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

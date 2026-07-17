@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <span class="brand">Page Summarizer</span>
+    <button id="openSettings" class="linkish" title="Settings">Settings</button>
+  </header>
+
+  <label class="field">
+    <span>Prompt</span>
+    <select id="presetSelect"></select>
+  </label>
+
+  <div class="actions">
+    <button id="extractBtn" class="secondary">Extract text only</button>
+    <button id="runBtn" class="primary">Summarize</button>
+  </div>
+
+  <div id="sizeLine" class="size-line" hidden></div>
+
+  <div id="status" class="status" hidden></div>
+
+  <div id="resultWrap" hidden>
+    <div class="result-tools">
+      <span id="resultLabel"></span>
+      <span class="spacer"></span>
+      <button id="histPrev" class="linkish nav" title="Older result">‹</button>
+      <span id="histPos" class="hist-pos"></span>
+      <button id="histNext" class="linkish nav" title="Newer result">›</button>
+      <button id="copyBtn" class="linkish">Copy</button>
+      <button id="downloadBtn" class="linkish">Download</button>
+      <button id="clearBtn" class="linkish">Clear</button>
+    </div>
+    <div id="result" class="result" tabindex="0"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

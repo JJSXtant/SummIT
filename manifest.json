@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Page Summarizer",
+  "version": "1.0.0",
+  "description": "Extract page text and summarize it with Gemini or a local Ollama model, using your own saved prompts.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Page Summarizer"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
