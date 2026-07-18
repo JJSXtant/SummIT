@@ -1,4 +1,4 @@
-# Page Summarizer (v1)
+# SummIT (v1)
 
 Extract page text, summarize with Gemini or local Ollama, using your own saved prompts.
 

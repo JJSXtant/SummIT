@@ -1,8 +1,8 @@
-# Privacy Policy — Page Summarizer
+# Privacy Policy — SummIT
 
 Last updated: 2026-07-17
 
-Page Summarizer runs entirely on your device.
+SummIT runs entirely on your device.
 
 **What the extension collects:** Nothing. It has no servers, no analytics, no tracking, and does not transmit any data to the developer.
 

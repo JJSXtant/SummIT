@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Page Summarizer",
+  "name": "SummIT",
   "version": "1.0.0",
   "description": "Extract page text and summarize it with Gemini or a local Ollama model, using your own saved prompts.",
   "permissions": ["activeTab", "storage", "scripting"],
@@ -11,7 +11,7 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Page Summarizer"
+    "default_title": "SummIT"
   },
   "options_page": "options.html",
   "icons": {
