@@ -2,6 +2,9 @@
 
 Extract page text, summarize with Gemini or local Ollama, using your own saved prompts.
 
+## Keyboard shortcut
+Default `Ctrl+Shift+Y` (`Cmd+Shift+Y` on Mac) runs Summarize on the active tab using the last-used preset, without opening the popup first — handled by `background.js` via the `commands` API. Change it at `chrome://extensions/shortcuts` or the button in Settings. Result lands in the same result history the popup shows, so open the popup afterward if it didn't pop open automatically.
+
 ## Load for testing
 1. chrome://extensions → enable Developer mode
 2. "Load unpacked" → select this folder
@@ -22,7 +25,7 @@ OLLAMA_ORIGINS=chrome-extension://* ollama serve
 5. Listing needs: 1280×800 screenshot, 128px icon (included), description, privacy policy URL
 6. Data-use disclosure: declare "website content" is transmitted to the user's chosen AI provider; no data collected by developer
 7. Permission justifications:
-   - activeTab/scripting: "Reads visible text of the current page when the user clicks Extract/Summarize"
+   - activeTab/scripting: "Reads visible text of the current page when the user clicks Extract/Summarize, or triggers the keyboard shortcut"
    - storage: "Saves user settings and prompt presets locally"
    - host permissions: "Sends user-initiated requests to the Gemini API and the user's local Ollama server"
 

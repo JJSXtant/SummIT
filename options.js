@@ -57,6 +57,9 @@ async function init() {
     renderPresets();
   });
   $("save").addEventListener("click", save);
+  $("openShortcuts").addEventListener("click", () => {
+    chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
+  });
 }
 
 function toggleProviderFields() {
