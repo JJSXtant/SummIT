@@ -10,6 +10,6 @@ What it stores locally: Your settings (provider choice, API key, model names, pr
 
 What it sends, and where: When you click "Summarize", the visible text of the current page (plus title, URL, and timestamp if enabled in settings) is sent directly from your browser to the provider you selected: Google's Gemini API (governed by Google's terms and privacy policy) or your own local Ollama server (data never leaves your machine). Nothing is sent when you use "Extract text only". The developer never sees any of this data.
 
-Permissions: `activeTab` and `scripting` are used only when you click a button, to read the current page's text. `storage` saves your settings locally.
+Permissions: `activeTab` and `scripting` are used only when you click a button or use the keyboard shortcut, to read the current page's text. `storage` saves your settings locally.
 
 Contact: Flipthat.support@gmail.com
