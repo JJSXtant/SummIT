@@ -58,6 +58,19 @@ header {
   margin-bottom: 14px;
 }
 
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brand-logo {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  display: block;
+}
+
 .brand {
   font-family: ui-monospace, "SF Mono", Consolas, monospace;
   font-size: 11.5px;

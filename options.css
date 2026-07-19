@@ -54,13 +54,26 @@ body {
 
 main { max-width: 640px; margin: 0 auto; padding: 36px 20px 64px; }
 
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.brand-logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  display: block;
+}
+
 h1 {
   font-family: ui-monospace, "SF Mono", Consolas, monospace;
   font-size: 14px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 28px;
   font-weight: 600;
 }
 
