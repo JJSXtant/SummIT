@@ -1,35 +1,24 @@
-# SummIT (v1)
+- Overview SummIT (v1) - 
 
-Extract page text, summarize with Gemini or local Ollama, using your own saved prompts.
+This is a simple extension to extract page text, summarize with your own Gemini or local Ollama, using your own saved prompts. This extension is for those who want fine tuned controls over the summarization process and use their own LLMs. 
 
-## Keyboard shortcut
-Default `Ctrl+Shift+Y` (`Cmd+Shift+Y` on Mac) runs Summarize on the active tab using the last-used preset, without opening the popup first — handled by `background.js` via the `commands` API. Change it at `chrome://extensions/shortcuts` or the button in Settings. Result lands in the same result history the popup shows, so open the popup afterward if it didn't pop open automatically.
+The tool allows you to configure system prompt, number of tokens and meta data that is sent to the LLM. 
 
-## Load for testing
-1. chrome://extensions → enable Developer mode
-2. "Load unpacked" → select this folder
-3. Open Settings (link in popup), paste a Gemini API key (free at aistudio.google.com), save
+Future versions will be focused on syncing with automated systems: 
 
-## Ollama note
-Ollama blocks extension requests by default. Run it with:
-```
-OLLAMA_ORIGINS=chrome-extension://* ollama serve
-```
-(Windows: set OLLAMA_ORIGINS as an environment variable, restart Ollama.)
-
-## Store submission checklist
-1. Test on 5–10 varied sites (news, docs, SPA, long article — confirm truncation notice)
-2. Host PRIVACY.md publicly (GitHub Pages / repo link)
-3. Zip the folder contents (not the folder itself): manifest.json at zip root
-4. Chrome Web Store dev dashboard ($5 one-time) → New item → upload zip
-5. Listing needs: 1280×800 screenshot, 128px icon (included), description, privacy policy URL
-6. Data-use disclosure: declare "website content" is transmitted to the user's chosen AI provider; no data collected by developer
-7. Permission justifications:
-   - activeTab/scripting: "Reads visible text of the current page when the user clicks Extract/Summarize, or triggers the keyboard shortcut"
-   - storage: "Saves user settings and prompt presets locally"
-   - host permissions: "Sends user-initiated requests to the Gemini API and the user's local Ollama server"
-
-## v1.1 roadmap
 - Google Drive export (OAuth + verification review)
 - Readability.js article extraction
 - Streaming responses
+- More LLM support
+
+
+- Keyboard shortcut - 
+Default `Ctrl+Shift+Y` (`Cmd+Shift+Y` on Mac) runs Summarize on the active tab using the last-used preset, without opening the popup first — handled by `background.js` via the `commands` API. Change it at `chrome://extensions/shortcuts` or the button in Settings. Result lands in the same result history the popup shows, so open the popup afterward if it didn't pop open automatically.
+
+
+- Ollama note - 
+Ollama blocks extension requests by default. Run it with by allowing unblocking requests from chrom-extension to the server. This is done by setting OLLAMA_ORIGINS as an environment variable and restarting or running: 
+
+`OLLAMA_ORIGINS=chrome-extension://* ollama serve`
+
+
