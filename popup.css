@@ -58,26 +58,11 @@ header {
   margin-bottom: 14px;
 }
 
-.brand-group {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 .brand-logo {
-  width: 18px;
-  height: 18px;
-  border-radius: 5px;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
   display: block;
-}
-
-.brand {
-  font-family: ui-monospace, "SF Mono", Consolas, monospace;
-  font-size: 11.5px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 600;
 }
 
 .field { display: block; margin-bottom: 12px; }
