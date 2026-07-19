@@ -19,7 +19,7 @@ Default `Ctrl+Shift+Y` , (`Cmd+Shift+Y` on Mac) runs Summarize on the active tab
 
 ----- Ollama note ----- 
 
-Ollama blocks extension requests by default. Run it with by allowing unblocking requests from chrome-extension to the server. This is done by setting OLLAMA_ORIGINS as an environment variable and restarting or running: 
+Ollama blocks extension requests by default. Run this by allowing unblocking requests from chrome-extension to the server. This is done by setting OLLAMA_ORIGINS as an environment variable and restarting or running: 
 
 `OLLAMA_ORIGINS=chrome-extension://* ollama serve`
 
