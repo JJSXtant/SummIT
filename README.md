@@ -10,6 +10,7 @@ Future versions will be focused on syncing with automated systems:
 - Readability.js article extraction
 - Streaming responses
 - More LLM support
+- Extract only selection
 
 
 ----- Keyboard shortcut ----- 
